@@ -7,11 +7,17 @@ import { RiVideoAddLine } from "react-icons/ri";
 import { FaRegBell } from "react-icons/fa";
 import profile from "../assets/profile.jpg"
 import Avatar from "react-avatar"
+import { useDispatch } from "react-redux";
+import { openSidebar } from "../Redux/ContextRedux";
 const Navbar = () => {
+  const Dispatch = useDispatch()
+  const toggleHamburger =()=>{
+   Dispatch(openSidebar())
+  }
   return (
     <div className="flex justify-between items-center px-6 py-2 fixed top-0 w-[100%] bg-white">
       <div className="flex items-center space-x-4">
-        <GiHamburgerMenu size={"24px"} className="cursor-pointer" />
+        <GiHamburgerMenu size={"24px"} className="cursor-pointer" onClick={toggleHamburger}/>
         <img src={Logo} alt="logo" className="w-28 cursor-pointer" />
       </div>
 
