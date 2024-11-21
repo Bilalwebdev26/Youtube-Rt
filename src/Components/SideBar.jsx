@@ -1,19 +1,27 @@
 import React from "react";
-import { firstSec,secondSec,thirdSec,forthSec,fifthSec } from "../constants";
+import {
+  firstSec,
+  secondSec,
+  thirdSec,
+  forthSec,
+  fifthSec,
+} from "../constants";
 import { FaChevronRight } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
 const SideBar = () => {
-  const open = useSelector((state)=>state.app.open)
-  console.log(open)
-   
+  const open = useSelector((state) => state.app.open);
+  console.log(open);
+
   return (
-    <div className={`px-6 w-[250px] h-[calc(100vh-60px)] overflow-y-auto fixed bg-white overflow-x-hidden scrollbar scrollbar-thumb-gray-300 transform transition-transform duration-500 shadow-lg z-50 `}
-    style={{
-      transform: open ? "translateX(0)" : "translateX(-100%)",
-      // top: "60px", // Adjust based on header height
-      left: "0",
-    }}>
+    <div
+      className={`px-6 w-[250px] h-[calc(100vh-60px)] overflow-y-auto fixed bg-white overflow-x-hidden scrollbar scrollbar-thumb-gray-300 transform transition-transform duration-500 shadow-lg z-50 `}
+      style={{
+        transform: open ? "translateX(0)" : "translateX(-100%)",
+        // top: "60px", // Adjust based on header height
+        left: "0",
+      }}
+    >
       <div className=" items-center space-y-2 mt-2">
         {firstSec.map((label, index) => (
           <div
@@ -95,8 +103,13 @@ const SideBar = () => {
       </div>
       <hr className="border-gray-600 my-4" />
       <div className="">
-        <span className="text-sm text-gray-800 cursor-pointer font-bold">About Press Copyright <br /> Contact-us Creator <br />Advertise Developers</span>
-        <p className="text-gray-800 cursor-pointer text-sm font-bold mt-5">Terms Privacy Policy & Safety How YouTube works Test new features</p>
+        <span className="text-sm text-gray-800 cursor-pointer font-bold">
+          About Press Copyright <br /> Contact-us Creator <br />
+          Advertise Developers
+        </span>
+        <p className="text-gray-800 cursor-pointer text-sm font-bold mt-5">
+          Terms Privacy Policy & Safety How YouTube works Test new features
+        </p>
         <p className="text-gray-700 text-xs my-3">© 2024 Google LLC</p>
       </div>
     </div>

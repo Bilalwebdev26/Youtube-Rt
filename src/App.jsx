@@ -6,6 +6,7 @@ import {Route, Routes} from "react-router-dom"
 import Home from "./Components/Home.jsx";
 import Search from "./Components/Search.jsx";
 import PlayingVideo from "./Components/PlayingVideo.jsx";
+import ButtonList from "./Components/ButtonList.jsx";
 
 const App = () => {
   const { loading, data } = useAuthHook();
@@ -14,6 +15,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
+      <ButtonList/>
       <Routes>
         <Route path="/" exact element={<Home/>}/>
         <Route path="/search/:searchQuery" element={<Search/>}/>

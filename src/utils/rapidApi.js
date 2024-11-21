@@ -7,7 +7,7 @@ const options = {
   // port: null,
   // path: '/auto-complete/?q=desp&hl=en&gl=US',
   headers: {
-    "x-rapidapi-key":import.meta.env.VITE_YOUTUBE_API_KEY,
+    "x-rapidapi-key":import.meta.env.VITE_TOUTUEB_API_KEY,
     // import.meta.env.VITE_TOUTUEB_API_KEY"
     "x-rapidapi-host": "youtube138.p.rapidapi.com",
   },
@@ -22,3 +22,4 @@ export const fetchData = async (url) => {
     throw error;
   }
 };
+// 54dcefc50amsh639a1fc6f6df737p1307b1jsndf542b3232db

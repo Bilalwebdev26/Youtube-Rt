@@ -15,7 +15,7 @@ const Navbar = () => {
    Dispatch(openSidebar())
   }
   return (
-    <div className="flex justify-between items-center px-6 py-2 fixed top-0 w-[100%] bg-white">
+    <div className="flex justify-between items-center px-6 py-2 fixed top-0 w-[100%] ">
       <div className="flex items-center space-x-4">
         <GiHamburgerMenu size={"24px"} className="cursor-pointer" onClick={toggleHamburger}/>
         <img src={Logo} alt="logo" className="w-28 cursor-pointer" />
