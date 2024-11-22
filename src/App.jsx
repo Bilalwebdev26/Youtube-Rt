@@ -10,19 +10,19 @@ import ButtonList from "./Components/ButtonList.jsx";
 import Loading from "./Components/Loading.jsx";
 
 const App = () => {
-  const { loading } = useAuthHook();
+  const { loading,data } = useAuthHook();
   console.log("App loading",loading)
   return (
     <div>
       <Navbar />
       <ButtonList/>
-      
-      {loading && <Loading/>}
+      {/* {loading && <Loading/>} */}
       <Routes>
         <Route path="/" exact element={<Home/>}/>
         <Route path="/search/:searchQuery" element={<Search/>}/>
         <Route path="/video/:id" element={<PlayingVideo/>}/>
       </Routes>
+      {/* {loading && <Loading/>} */}
     </div>
   );
 };
