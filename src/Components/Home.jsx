@@ -15,7 +15,7 @@ const Home = () => {
      
     <div className=" flex-1 h-[calc(100vh-60px)] overflow-y-auto scrollbar-hide">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5">
-        {data.map((item,index) => {
+        {!loading && data.map((item,index) => {
           if (item.type !== "video") return false;
           return <Video key={index} video={item?.video} />;
         })}

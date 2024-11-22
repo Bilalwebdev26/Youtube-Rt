@@ -7,17 +7,23 @@ const options = {
   // port: null,
   // path: '/auto-complete/?q=desp&hl=en&gl=US',
   headers: {
-    "x-rapidapi-key":import.meta.env.VITE_TOUTUEB_API_KEY,
+    "x-rapidapi-key": import.meta.env.VITE_TOUTUEB_API_KEY,
     // import.meta.env.VITE_TOUTUEB_API_KEY"
-    "x-rapidapi-host": "youtube138.p.rapidapi.com",
+    "x-rapidapi-host": "https://www.googleapis.com/youtube/v3",
   },
 };
 export const fetchData = async (url) => {
   try {
+    console.log("Base URL:", Base_Url);
+    console.log("Request URL:", `${Base_Url}/${url}`);
+    console.log("Headers:", options.headers);
     const { data } = await axios.get(`${Base_Url}/${url}`, options); //help to make http req
     console.log(data);
     return data;
   } catch (error) {
+    console.log("Base URL:", Base_Url);
+    console.log("Request URL:", `${Base_Url}/${url}`);
+    console.log("Headers:", options.headers);
     console.log("Error while fetching : ", error);
     throw error;
   }
