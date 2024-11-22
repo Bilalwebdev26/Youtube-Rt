@@ -10,14 +10,14 @@ import ButtonList from "./Components/ButtonList.jsx";
 import Loading from "./Components/Loading.jsx";
 
 const App = () => {
-  const { loading,data } = useAuthHook();
+  const { loading } = useAuthHook();
   console.log("App loading",loading)
   return (
     <div>
       <Navbar />
       <ButtonList/>
       
-      {/* {loading && <Loading/>} */}
+      {loading && <Loading/>}
       <Routes>
         <Route path="/" exact element={<Home/>}/>
         <Route path="/search/:searchQuery" element={<Search/>}/>
