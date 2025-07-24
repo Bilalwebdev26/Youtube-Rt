@@ -2,7 +2,7 @@ import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaSearch } from "react-icons/fa";
 import { FiMic } from "react-icons/fi";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/logo.png";
 import { RiVideoAddLine } from "react-icons/ri";
 import { FaRegBell } from "react-icons/fa";
 import profile from "../assets/profile.jpg"
